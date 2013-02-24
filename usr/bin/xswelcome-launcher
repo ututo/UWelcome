@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+import os
+from user import home
+
+if (not os.path.exists(home + "/.ututoxs/xsWelcome/norun.flag")):
+	os.system("xswelcome")
