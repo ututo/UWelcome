@@ -25,16 +25,19 @@ class MintWelcome():
 
         sys.path.append('/usr/lib/ututo/common')
         from configobj import ConfigObj
-        config = ConfigObj("/etc/ututo/info")
+	
+	if os.path.exists(home + "/.ututoxs/xsWelcome/info"):
+	    config = ConfigObj(home + "/.ututoxs/xsWelcome/info")
+	else:
+	    os.system("/usr/lib/ututo/xsWelcome/crea_info.sh")
+	    config = ConfigObj(home + "/.ututoxs/xsWelcome/info")
+
         description = config['DESCRIPTION']
         codename = config['CODENAME']
         edition = config['EDITION']
         release = config['RELEASE']
         description = description.replace("\"", "")
-        self.release_notes = config['RELEASE_NOTES_URL']
-        self.user_guide = config['USER_GUIDE_URL']
-        self.new_features = config['NEW_FEATURES_URL']
-
+        
         wTree.get_widget("main_window").connect("destroy", gtk.main_quit)
 
         browser = webkit.WebView()
