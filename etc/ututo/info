@@ -1,8 +1,0 @@
-RELEASE=Testing-07.007
-CODENAME=Core2 optimization
-EDITION="XS2012"
-DESCRIPTION="UTUTO XS GNU/Linux"
-NEW_FEATURES_URL=http://www.linuxmint.com/rel_nadia_whatsnew.php
-RELEASE_NOTES_URL=http://www.linuxmint.com/rel_nadia.php
-USER_GUIDE_URL=http://www.linuxmint.com/documentation.php
-GRUB_TITLE=Linux Mint 14 Cinnamon 64-bit
